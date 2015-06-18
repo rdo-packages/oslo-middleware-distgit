@@ -2,7 +2,7 @@
 
 Name:           python-oslo-middleware
 Version:        1.0.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        OpenStack Oslo Middleware library
 
 License:        ASL 2.0
@@ -76,5 +76,8 @@ rm -fr %{buildroot}%{python2_sitelib}/%{pypi_name}/tests/
 %doc html
 
 %changelog
+* Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
 * Fri Mar 27 2015 Alan Pevec <apevec@redhat.com> - 1.0.0-2
 - Initial package based on openstack-packages spec by dprince
