@@ -1,7 +1,7 @@
 %global pypi_name oslo.middleware
 
 Name:           python-oslo-middleware
-Version:        2.5.0
+Version:        2.8.0
 Release:        1%{?dist}
 Summary:        OpenStack Oslo Middleware library
 
@@ -76,6 +76,9 @@ rm -fr %{buildroot}%{python2_sitelib}/%{pypi_name}/tests/
 %doc html
 
 %changelog
+* Thu Sep 17 2015 Alan Pevec <alan.pevec@redhat.com> 2.8.0-1
+- Update to upstream 2.8.0
+
 * Tue Aug 18 2015 Alan Pevec <alan.pevec@redhat.com> 2.5.0-1
 - Update to upstream 2.5.0
 
