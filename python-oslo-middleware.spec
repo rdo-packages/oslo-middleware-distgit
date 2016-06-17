@@ -33,6 +33,8 @@ BuildRequires:  python-mock
 BuildRequires:  python-oslotest
 BuildRequires:  python-testtools
 BuildRequires:  python-webob
+# Required to compile translation files
+BuildRequires:  python-babel
 
 Requires:       python-babel
 Requires:       python-jinja2
@@ -43,6 +45,7 @@ Requires:       python-oslo-utils
 Requires:       python-six
 Requires:       python-stevedore
 Requires:       python-webob
+Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python2-%{pkg_name}
 The OpenStack Oslo Middleware library.
@@ -79,6 +82,7 @@ Requires:       python3-oslo-utils
 Requires:       python3-six
 Requires:       python3-stevedore
 Requires:       python3-webob
+Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python3-%{pkg_name}
 The OpenStack Oslo Middleware library.
@@ -125,6 +129,12 @@ Requires:  python-testtools
 %description -n python2-%{pkg_name}-tests
 Tests for the Oslo Middleware library.
 
+%package  -n python-%{pkg_name}-lang
+Summary:   Translation files for Oslo middleware library
+
+%description -n python-%{pkg_name}-lang
+Translation files for Oslo middleware library
+
 %description
 The OpenStack Oslo Middleware library.
 Oslo middleware library includes components that can be injected into wsgi
@@ -148,6 +158,8 @@ rm -rf {test-,}requirements.txt
 sphinx-build doc/source html
 # remove the sphinx-build leftovers
 rm -rf html/.{doctrees,buildinfo}
+# Generate i18n files
+%{__python2} setup.py compile_catalog -d build/lib/oslo_middleware/locale
 
 %install
 %py2_install
@@ -155,6 +167,18 @@ rm -rf html/.{doctrees,buildinfo}
 %if 0%{?with_python3}
 %py3_install
 %endif
+
+# Install i18n .mo files (.po and .pot are not required)
+install -d -m 755 %{buildroot}%{_datadir}
+rm -f %{buildroot}%{python2_sitelib}/oslo_middleware/locale/*/LC_*/oslo_middleware*po
+rm -f %{buildroot}%{python2_sitelib}/oslo_middleware/locale/*pot
+mv %{buildroot}%{python2_sitelib}/oslo_middleware/locale %{buildroot}%{_datadir}/locale
+%if 0%{?with_python3}
+rm -rf %{buildroot}%{python3_sitelib}/oslo_middleware/locale
+%endif
+
+# Find language files
+%find_lang oslo_middleware --all-name
 
 %check
 %{__python2} setup.py test
@@ -187,5 +211,7 @@ rm -rf .testrepository
 
 %files -n python2-%{pkg_name}-tests
 %{python2_sitelib}/oslo_middleware/tests/
+
+%files -n python-%{pkg_name}-lang -f oslo_middleware.lang
 
 %changelog
