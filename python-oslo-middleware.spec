@@ -7,8 +7,8 @@
 %global pkg_name oslo-middleware
 
 Name:           python-oslo-middleware
-Version:        XXX
-Release:        XXX
+Version:        3.19.0
+Release:        1%{?dist}
 Summary:        OpenStack Oslo Middleware library
 
 License:        ASL 2.0
@@ -216,3 +216,6 @@ rm -rf .testrepository
 %files -n python-%{pkg_name}-lang -f oslo_middleware.lang
 
 %changelog
+* Wed Sep 07 2016 Haikel Guemar <hguemar@fedoraproject.org> 3.19.0-1
+- Update to 3.19.0
+
