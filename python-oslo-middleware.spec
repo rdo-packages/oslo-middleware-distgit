@@ -214,6 +214,7 @@ rm -rf .testrepository
 %{python2_sitelib}/oslo_middleware/tests/
 
 %files -n python-%{pkg_name}-lang -f oslo_middleware.lang
+%license LICENSE
 
 %changelog
 * Wed Sep 07 2016 Haikel Guemar <hguemar@fedoraproject.org> 3.19.0-1
