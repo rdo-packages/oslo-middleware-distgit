@@ -214,5 +214,6 @@ rm -rf .testrepository
 %{python2_sitelib}/oslo_middleware/tests/
 
 %files -n python-%{pkg_name}-lang -f oslo_middleware.lang
+%license LICENSE
 
 %changelog
