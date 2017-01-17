@@ -32,6 +32,7 @@ BuildRequires:  python-fixtures
 BuildRequires:  python-hacking
 BuildRequires:  python-mock
 BuildRequires:  python-oslotest
+BuildRequires:  python-statsd
 BuildRequires:  python-testtools
 BuildRequires:  python-webob
 # Required to compile translation files
@@ -44,6 +45,7 @@ Requires:       python-oslo-context
 Requires:       python-oslo-i18n
 Requires:       python-oslo-utils
 Requires:       python-six
+Requires:       python-statsd
 Requires:       python-stevedore
 Requires:       python-webob
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
@@ -71,6 +73,7 @@ BuildRequires:  python3-fixtures
 BuildRequires:  python3-hacking
 BuildRequires:  python3-mock
 BuildRequires:  python3-oslotest
+BuildRequires:  python3-statsd
 BuildRequires:  python3-testtools
 BuildRequires:  python3-webob
 
@@ -81,6 +84,7 @@ Requires:       python3-oslo-context
 Requires:       python3-oslo-i18n
 Requires:       python3-oslo-utils
 Requires:       python3-six
+Requires:       python3-statsd
 Requires:       python3-stevedore
 Requires:       python3-webob
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
