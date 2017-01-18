@@ -16,6 +16,24 @@
       "revId": "216da8c5d6f2dd4343fbf1ad92d7a08ef3d473ad",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dab895d6_786d5804",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-01-18T18:55:00Z",
+      "side": 1,
+      "message": "It has been released now in 3.23.0\nWe still have 3.22.0 pin in ocata-uc but that will be bumped in next u-c refresh https://review.rdoproject.org/r/#/q/topic:rdoinfo-uc-update-master",
+      "parentUuid": "dab895d6_982b0c30",
+      "revId": "216da8c5d6f2dd4343fbf1ad92d7a08ef3d473ad",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
