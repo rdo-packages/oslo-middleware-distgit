@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dab895d6_982b0c30",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-01-18T12:42:05Z",
+      "side": 1,
+      "message": "NB this change was not released yet, but additional dependency as a preparation for Ocata library releases is fine.",
+      "revId": "216da8c5d6f2dd4343fbf1ad92d7a08ef3d473ad",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
