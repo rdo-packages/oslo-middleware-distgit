@@ -1,6 +1,9 @@
-# UUID                                  	Group Name
-#
-08d6680c71e565efcf7cb2f12cf95565af62232e	openstack/oslo-middleware-distgit-ptl
-0c26ad539cdb9cb50a6c906b2981c559596ba5b9	openstack/oslo-middleware-distgit-core
-63673ea7f2ae6a5666566b1ea9f14e473d00f5a9	rdo-core
-global:Registered-Users                 	Registered Users
+# UUID Group Name
+global:Registered-Users	Registered Users
+4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
+global:Anonymous-Users	Anonymous Users
+d26690229b414b051ac6b31efdafb89fa30227cd	openstack/oslo-middleware-core
+11d7a575feddbca6c8b72f1e5a693e0cedaf19d0	openstack/oslo-middleware-ptl
+05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
+401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
