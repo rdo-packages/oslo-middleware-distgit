@@ -48,7 +48,7 @@ Requires:       python-oslo-utils >= 3.18.0
 Requires:       python-six
 Requires:       python-statsd
 Requires:       python-stevedore
-Requires:       python-webob
+Requires:       python-webob >= 1.7.0
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python2-%{pkg_name}
