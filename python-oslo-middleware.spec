@@ -8,13 +8,13 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-oslo-middleware
-Version:        3.8.0
+Version:        3.8.1
 Release:        1%{?dist}
 Summary:        OpenStack Oslo Middleware library
 
 License:        ASL 2.0
 URL:            https://launchpad.net/oslo
-Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 %package -n python2-%{pkg_name}
@@ -191,6 +191,9 @@ rm -rf .testrepository
 %{python2_sitelib}/oslo_middleware/tests/
 
 %changelog
+* Tue May 23 2017 Alfredo Moralejo <amoralej@redhat.com> 3.8.1-1
+- Update to 3.8.1
+
 * Wed Sep 07 2016 Haikel Guemar <hguemar@fedoraproject.org> 3.8.0-1
 - Update to 3.8.0
 
