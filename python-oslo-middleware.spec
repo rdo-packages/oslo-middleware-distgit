@@ -8,7 +8,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-oslo-middleware
-Version:        3.8.0
+Version:        3.8.1
 Release:        1%{?dist}
 Summary:        OpenStack Oslo Middleware library
 
@@ -191,6 +191,9 @@ rm -rf .testrepository
 %{python2_sitelib}/oslo_middleware/tests/
 
 %changelog
+* Tue May 23 2017 Alfredo Moralejo <amoralej@redhat.com> 3.8.1-1
+- Update to 3.8.1
+
 * Wed Sep 07 2016 Haikel Guemar <hguemar@fedoraproject.org> 3.8.0-1
 - Update to 3.8.0
 
