@@ -7,7 +7,7 @@
 %global pkg_name oslo-middleware
 
 Name:           python-oslo-middleware
-Version:        3.19.0
+Version:        3.19.1
 Release:        1%{?dist}
 Summary:        OpenStack Oslo Middleware library
 
@@ -217,6 +217,9 @@ rm -rf .testrepository
 %license LICENSE
 
 %changelog
+* Tue May 23 2017 rdo-trunk <javier.pena@redhat.com> 3.19.1-1
+- Update to 3.19.1
+
 * Wed Sep 07 2016 Haikel Guemar <hguemar@fedoraproject.org> 3.19.0-1
 - Update to 3.19.0
 
