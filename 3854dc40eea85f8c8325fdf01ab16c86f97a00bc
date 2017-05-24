@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa201ad_5c825353",
+        "filename": "python-oslo-middleware.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-24T22:37:08Z",
+      "side": 1,
+      "message": "@amoralej @jpena could we put better looking Name / Email here?",
+      "range": {
+        "startLine": 220,
+        "startChar": 18,
+        "endLine": 220,
+        "endChar": 52
+      },
+      "revId": "3854dc40eea85f8c8325fdf01ab16c86f97a00bc",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
