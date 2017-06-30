@@ -23,6 +23,7 @@ Summary:        OpenStack Oslo Middleware library
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 # for docs build
+BuildRequires:  git
 BuildRequires:  python-oslo-config
 BuildRequires:  python-oslo-context
 BuildRequires:  python-oslo-i18n
@@ -118,7 +119,7 @@ Summary:    Documentation for the Oslo Middleware library
 Group:      Documentation
 
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-openstackdocstheme
 
 %description doc
 Documentation for the Oslo Middleware library.
@@ -150,7 +151,7 @@ enhanced with functionality like add/delete/modification of http headers
 and support for limiting size/connection etc.
 
 %prep
-%setup -q -n %{pypi_name}-%{upstream_version}
+%autosetup -n %{pypi_name}-%{upstream_version} -S git
 # Let RPM handle the dependencies
 rm -rf {test-,}requirements.txt
 
@@ -162,9 +163,9 @@ rm -rf {test-,}requirements.txt
 %endif
 
 # generate html docs
-sphinx-build doc/source html
+python setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
-rm -rf html/.{doctrees,buildinfo}
+rm -rf doc/build/html/.{doctrees,buildinfo}
 # Generate i18n files
 %{__python2} setup.py compile_catalog -d build/lib/oslo_middleware/locale
 
@@ -214,7 +215,7 @@ rm -rf .testrepository
 
 %files doc
 %license LICENSE
-%doc html
+%doc doc/build/html
 
 %files -n python2-%{pkg_name}-tests
 %{python2_sitelib}/oslo_middleware/tests/
