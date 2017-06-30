@@ -118,7 +118,7 @@ Summary:    Documentation for the Oslo Middleware library
 Group:      Documentation
 
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-openstackdocstheme
 
 %description doc
 Documentation for the Oslo Middleware library.
