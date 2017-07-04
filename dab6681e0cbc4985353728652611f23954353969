@@ -16,6 +16,24 @@
       "revId": "dab6681e0cbc4985353728652611f23954353969",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_d99e4c56",
+        "filename": "python-oslo-middleware.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2017-07-04T12:02:56Z",
+      "side": 1,
+      "message": "I think it\u0027s good to have same as what upstream does: https://github.com/openstack/oslo.middleware/blob/master/tox.ini#L21 , what do you or others think?",
+      "parentUuid": "9aa7fdbe_d9e2cc02",
+      "revId": "dab6681e0cbc4985353728652611f23954353969",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
