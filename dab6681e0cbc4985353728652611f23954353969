@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa7fdbe_d9e2cc02",
+        "filename": "python-oslo-middleware.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-07-04T10:02:34Z",
+      "side": 1,
+      "message": "Do we want to switch to python setup.py build_sphinx for consistency?",
+      "revId": "dab6681e0cbc4985353728652611f23954353969",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
