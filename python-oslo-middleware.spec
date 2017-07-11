@@ -7,7 +7,7 @@
 %global pkg_name oslo-middleware
 
 Name:           python-oslo-middleware
-Version:        3.23.1
+Version:        3.23.2
 Release:        1%{?dist}
 Summary:        OpenStack Oslo Middleware library
 
@@ -223,6 +223,9 @@ rm -rf .testrepository
 %license LICENSE
 
 %changelog
+* Tue Jul 11 2017 rdo-trunk <javier.pena@redhat.com> 3.23.2-1
+- Update to 3.23.2
+
 * Wed Feb 08 2017 Alfredo Moralejo <amoralej@redhat.com> 3.23.1-1
 - Update to 3.23.1
 
