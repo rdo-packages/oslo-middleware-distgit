@@ -42,10 +42,10 @@ BuildRequires:  python-babel
 Requires:       python-babel
 Requires:       python-debtcollector
 Requires:       python-jinja2
-Requires:       python-oslo-config >= 2:3.14.0
-Requires:       python-oslo-context >= 2.9.0
+Requires:       python-oslo-config >= 2:4.0.0
+Requires:       python-oslo-context >= 2.14.0
 Requires:       python-oslo-i18n >= 2.1.0
-Requires:       python-oslo-utils >= 3.18.0
+Requires:       python-oslo-utils >= 3.20.0
 Requires:       python-six
 Requires:       python-statsd
 Requires:       python-stevedore
@@ -82,10 +82,10 @@ BuildRequires:  python3-webob
 Requires:       python3-babel
 Requires:       python3-debtcollector
 Requires:       python3-jinja2
-Requires:       python3-oslo-config >= 2:3.14.0
-Requires:       python3-oslo-context >= 2.9.0
+Requires:       python3-oslo-config >= 2:4.0.0
+Requires:       python3-oslo-context >= 2.14.0
 Requires:       python3-oslo-i18n >= 2.1.0
-Requires:       python3-oslo-utils >= 3.18.0
+Requires:       python3-oslo-utils >= 3.20.0
 Requires:       python3-six
 Requires:       python3-statsd
 Requires:       python3-stevedore
