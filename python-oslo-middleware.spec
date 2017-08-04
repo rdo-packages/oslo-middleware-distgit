@@ -33,6 +33,7 @@ BuildRequires:  python-fixtures
 BuildRequires:  python-hacking
 BuildRequires:  python-mock
 BuildRequires:  python-oslotest
+BuildRequires:  python-oslo-serialization
 BuildRequires:  python-statsd
 BuildRequires:  python-testtools
 BuildRequires:  python-webob
@@ -75,6 +76,7 @@ BuildRequires:  python3-fixtures
 BuildRequires:  python3-hacking
 BuildRequires:  python3-mock
 BuildRequires:  python3-oslotest
+BuildRequires:  python3-oslo-serialization
 BuildRequires:  python3-statsd
 BuildRequires:  python3-testtools
 BuildRequires:  python3-webob
@@ -224,3 +226,4 @@ rm -rf .testrepository
 %license LICENSE
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/oslo.middleware/commit/?id=1f21acb318a75ab09e89c9d927502836801f7701
