@@ -22,6 +22,30 @@
       "revId": "8b6c938365598b77777c1a35be3660780dd324ea",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a890539_709e6e58",
+        "filename": "python-oslo-middleware.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2017-08-04T10:01:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a890539_f0ffbea8",
+      "range": {
+        "startLine": 47,
+        "startChar": 39,
+        "endLine": 47,
+        "endChar": 45
+      },
+      "revId": "8b6c938365598b77777c1a35be3660780dd324ea",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
