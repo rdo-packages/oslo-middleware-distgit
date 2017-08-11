@@ -7,8 +7,8 @@
 %global pkg_name oslo-middleware
 
 Name:           python-oslo-middleware
-Version:        XXX
-Release:        XXX
+Version:        3.30.0
+Release:        1%{?dist}
 Summary:        OpenStack Oslo Middleware library
 
 License:        ASL 2.0
@@ -226,3 +226,6 @@ rm -rf .testrepository
 %license LICENSE
 
 %changelog
+* Fri Aug 11 2017 Alfredo Moralejo <amoralej@redhat.com> 3.30.0-1
+- Update to 3.30.0
+
