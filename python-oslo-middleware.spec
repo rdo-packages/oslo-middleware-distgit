@@ -6,6 +6,17 @@
 %global pypi_name oslo.middleware
 %global pkg_name oslo-middleware
 
+%global common_desc \
+The OpenStack Oslo Middleware library \
+Oslo middleware library includes components that can be injected into wsgi \
+pipelines to intercept request/response flows. The base class can be \
+enhanced with functionality like add/delete/modification of http headers \
+and support for limiting size/connection etc.
+
+
+
+
+
 Name:           python-oslo-middleware
 Version:        XXX
 Release:        XXX
@@ -54,11 +65,7 @@ Requires:       python-webob >= 1.7.1
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python2-%{pkg_name}
-The OpenStack Oslo Middleware library.
-Oslo middleware library includes components that can be injected into wsgi
-pipelines to intercept request/response flows. The base class can be
-enhanced with functionality like add/delete/modification of http headers
-and support for limiting size/connection etc.
+%{common_desc}
 
 %if 0%{?with_python3}
 %package -n python3-%{pkg_name}
@@ -95,11 +102,7 @@ Requires:       python3-webob >= 1.7.1
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python3-%{pkg_name}
-The OpenStack Oslo Middleware library.
-Oslo middleware library includes components that can be injected into wsgi
-pipelines to intercept request/response flows. The base class can be
-enhanced with functionality like add/delete/modification of http headers
-and support for limiting size/connection etc.
+%{common_desc}
 
 %package -n python3-%{pkg_name}-tests
 Summary:    Tests for the Oslo Middleware library
@@ -146,11 +149,7 @@ Summary:   Translation files for Oslo middleware library
 Translation files for Oslo middleware library
 
 %description
-The OpenStack Oslo Middleware library.
-Oslo middleware library includes components that can be injected into wsgi
-pipelines to intercept request/response flows. The base class can be
-enhanced with functionality like add/delete/modification of http headers
-and support for limiting size/connection etc.
+%{common_desc}
 
 %prep
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
