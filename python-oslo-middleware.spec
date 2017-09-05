@@ -15,6 +15,17 @@ and support for limiting size/connection etc.
 %global common_desc2 \
 Tests for the Oslo Middleware library.
 
+%global common_desc \
+The OpenStack Oslo Middleware library \
+Oslo middleware library includes components that can be injected into wsgi \
+pipelines to intercept request/response flows. The base class can be \
+enhanced with functionality like add/delete/modification of http headers \
+and support for limiting size/connection etc.
+
+
+
+
+
 Name:           python-oslo-middleware
 Version:        XXX
 Release:        XXX
