@@ -2,7 +2,7 @@
 %if 0%{?fedora} >= 24
 %global with_python3 1
 %endif
-
+%global with_doc 1
 %global pypi_name oslo.middleware
 %global pkg_name oslo-middleware
 %global common_desc \
@@ -116,7 +116,7 @@ Requires:  python3-testtools
 %{common_desc2}
 
 %endif
-
+%if 0%{?with_doc}
 %package doc
 Summary:    Documentation for the Oslo Middleware library
 Group:      Documentation
@@ -126,6 +126,7 @@ BuildRequires:  python-openstackdocstheme
 
 %description doc
 Documentation for the Oslo Middleware library.
+%endif
 
 %package -n python2-%{pkg_name}-tests
 Summary:    Tests for the Oslo Middleware library
@@ -161,10 +162,12 @@ rm -rf {test-,}requirements.txt
 %py3_build
 %endif
 
+%if 0%{?with_doc}
 # generate html docs
 python setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
+%endif
 # Generate i18n files
 %{__python2} setup.py compile_catalog -d build/lib/oslo_middleware/locale
 
@@ -212,9 +215,11 @@ rm -rf .testrepository
 %{python3_sitelib}/oslo_middleware/tests/
 %endif
 
+%if 0%{?with_doc}
 %files doc
 %license LICENSE
 %doc doc/build/html
+%endif
 
 %files -n python2-%{pkg_name}-tests
 %{python2_sitelib}/oslo_middleware/tests/
