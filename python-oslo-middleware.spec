@@ -123,6 +123,7 @@ Group:      Documentation
 
 BuildRequires:  python-sphinx
 BuildRequires:  python-openstackdocstheme
+BuildRequires:  openstack-macros
 
 %description doc
 Documentation for the Oslo Middleware library.
@@ -152,7 +153,7 @@ Translation files for Oslo middleware library
 %prep
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
 # Let RPM handle the dependencies
-rm -rf {test-,}requirements.txt
+%py_req_cleanup
 
 %build
 %py2_build
