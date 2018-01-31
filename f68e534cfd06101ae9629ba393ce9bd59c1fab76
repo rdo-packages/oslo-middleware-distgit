@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_39317fed",
+        "filename": "python-oslo-middleware.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-01-31T17:55:59Z",
+      "side": 1,
+      "message": "python2-%{pkg_name}?",
+      "range": {
+        "startLine": 141,
+        "startChar": 11,
+        "endLine": 141,
+        "endChar": 29
+      },
+      "revId": "f68e534cfd06101ae9629ba393ce9bd59c1fab76",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
