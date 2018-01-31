@@ -30,36 +30,44 @@ Summary:        OpenStack Oslo Middleware library
 %{?python_provide:%python_provide python2-%{pkg_name}}
 
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
+BuildRequires:  python2-pbr
 # for docs build
 BuildRequires:  git
-BuildRequires:  python-oslo-config
-BuildRequires:  python-oslo-context
-BuildRequires:  python-oslo-i18n
-BuildRequires:  python-oslo-utils
+BuildRequires:  python2-oslo-config
+BuildRequires:  python2-oslo-context
+BuildRequires:  python2-oslo-i18n
+BuildRequires:  python2-oslo-utils
 # Required for testing
-BuildRequires:  python-fixtures
-BuildRequires:  python-hacking
-BuildRequires:  python-mock
-BuildRequires:  python-oslotest
-BuildRequires:  python-oslo-serialization
-BuildRequires:  python-statsd
-BuildRequires:  python-testtools
+BuildRequires:  python2-fixtures
+BuildRequires:  python2-hacking
+BuildRequires:  python2-mock
+BuildRequires:  python2-oslotest
+BuildRequires:  python2-oslo-serialization
+BuildRequires:  python2-statsd
+BuildRequires:  python2-testtools
+%if 0%{?fedora} > 0
+BuildRequires:  python2-webob
+%else
 BuildRequires:  python-webob
+%endif
 # Required to compile translation files
-BuildRequires:  python-babel
+BuildRequires:  python2-babel
 
-Requires:       python-babel
-Requires:       python-debtcollector >= 1.2.0
-Requires:       python-jinja2
-Requires:       python-oslo-config >= 2:4.0.0
-Requires:       python-oslo-context >= 2.14.0
-Requires:       python-oslo-i18n >= 2.1.0
-Requires:       python-oslo-utils >= 3.20.0
-Requires:       python-six
-Requires:       python-statsd
-Requires:       python-stevedore >= 1.20.0
+Requires:       python2-pbr
+Requires:       python2-debtcollector >= 1.2.0
+Requires:       python2-jinja2
+Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-oslo-context >= 2.19.2
+Requires:       python2-oslo-i18n >= 3.15.3
+Requires:       python2-oslo-utils >= 3.33.0
+Requires:       python2-six
+Requires:       python2-statsd
+Requires:       python2-stevedore >= 1.20.0
+%if 0%{?fedora} > 0
+Requires:       python2-webob >= 1.7.1
+%else
 Requires:       python-webob >= 1.7.1
+%endif
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python2-%{pkg_name}
@@ -86,13 +94,13 @@ BuildRequires:  python3-statsd
 BuildRequires:  python3-testtools
 BuildRequires:  python3-webob
 
-Requires:       python3-babel
+Requires:       python3-pbr
 Requires:       python3-debtcollector >= 1.2.0
 Requires:       python3-jinja2
-Requires:       python3-oslo-config >= 2:4.0.0
-Requires:       python3-oslo-context >= 2.14.0
-Requires:       python3-oslo-i18n >= 2.1.0
-Requires:       python3-oslo-utils >= 3.20.0
+Requires:       python3-oslo-config >= 2:5.1.0
+Requires:       python3-oslo-context >= 2.19.2
+Requires:       python3-oslo-i18n >= 3.15.3
+Requires:       python3-oslo-utils >= 3.33.0
 Requires:       python3-six
 Requires:       python3-statsd
 Requires:       python3-stevedore >= 1.20.0
@@ -121,8 +129,8 @@ Requires:  python3-testtools
 Summary:    Documentation for the Oslo Middleware library
 Group:      Documentation
 
-BuildRequires:  python-sphinx
-BuildRequires:  python-openstackdocstheme
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-openstackdocstheme
 
 %description doc
 Documentation for the Oslo Middleware library.
@@ -131,11 +139,11 @@ Documentation for the Oslo Middleware library.
 Summary:    Tests for the Oslo Middleware library
 
 Requires:  python-%{pkg_name} = %{version}-%{release}
-Requires:  python-fixtures
-Requires:  python-hacking
-Requires:  python-mock
-Requires:  python-oslotest
-Requires:  python-testtools
+Requires:  python2-fixtures
+Requires:  python2-hacking
+Requires:  python2-mock
+Requires:  python2-oslotest
+Requires:  python2-testtools
 
 %description -n python2-%{pkg_name}-tests
 %{common_desc2}
