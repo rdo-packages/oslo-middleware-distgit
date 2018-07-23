@@ -56,7 +56,7 @@ BuildRequires:  python2-babel
 Requires:       python2-pbr
 Requires:       python2-debtcollector >= 1.2.0
 Requires:       python2-jinja2
-Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-oslo-config >= 2:5.2.0
 Requires:       python2-oslo-context >= 2.19.2
 Requires:       python2-oslo-i18n >= 3.15.3
 Requires:       python2-oslo-utils >= 3.33.0
@@ -97,7 +97,7 @@ BuildRequires:  python3-webob
 Requires:       python3-pbr
 Requires:       python3-debtcollector >= 1.2.0
 Requires:       python3-jinja2
-Requires:       python3-oslo-config >= 2:5.1.0
+Requires:       python3-oslo-config >= 2:5.2.0
 Requires:       python3-oslo-context >= 2.19.2
 Requires:       python3-oslo-i18n >= 3.15.3
 Requires:       python3-oslo-utils >= 3.33.0
