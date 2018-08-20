@@ -40,6 +40,7 @@ BuildRequires:  python2-oslo-utils
 # Required for testing
 BuildRequires:  python2-fixtures
 BuildRequires:  python2-hacking
+BuildRequires:  python2-jinja2
 BuildRequires:  python2-mock
 BuildRequires:  python2-oslotest
 BuildRequires:  python2-oslo-serialization
@@ -87,6 +88,7 @@ BuildRequires:  python3-oslo-i18n
 # Required for testing
 BuildRequires:  python3-fixtures
 BuildRequires:  python3-hacking
+BuildRequires:  python3-jinja2
 BuildRequires:  python3-mock
 BuildRequires:  python3-oslotest
 BuildRequires:  python3-oslo-serialization
