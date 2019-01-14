@@ -1,7 +1,9 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
-%if 0%{?fedora} >= 24
+%if 0%{?fedora} >= 24 || 0%{?rhel} > 7
 %global with_python3 1
 %endif
+
+%global with_doc 1
 
 %global pypi_name oslo.middleware
 %global pkg_name oslo-middleware
@@ -46,7 +48,7 @@ BuildRequires:  python2-oslotest
 BuildRequires:  python2-oslo-serialization
 BuildRequires:  python2-statsd
 BuildRequires:  python2-testtools
-%if 0%{?fedora} > 0
+%if 0%{?fedora} || 0%{?rhel} > 7
 BuildRequires:  python2-webob
 %else
 BuildRequires:  python-webob
@@ -64,7 +66,7 @@ Requires:       python2-oslo-utils >= 3.33.0
 Requires:       python2-six
 Requires:       python2-statsd
 Requires:       python2-stevedore >= 1.20.0
-%if 0%{?fedora} > 0
+%if 0%{?fedora} || 0%{?rhel} > 7
 Requires:       python2-webob >= 1.7.1
 %else
 Requires:       python-webob >= 1.7.1
@@ -127,6 +129,7 @@ Requires:  python3-testtools
 
 %endif
 
+%if 0%{?with_doc}
 %package doc
 Summary:    Documentation for the Oslo Middleware library
 Group:      Documentation
@@ -136,6 +139,7 @@ BuildRequires:  python2-openstackdocstheme
 
 %description doc
 Documentation for the Oslo Middleware library.
+%endif
 
 %package -n python2-%{pkg_name}-tests
 Summary:    Tests for the Oslo Middleware library
@@ -171,10 +175,12 @@ rm -rf {test-,}requirements.txt
 %py3_build
 %endif
 
+%if 0%{?with_doc}
 # generate html docs
 python setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
+%endif
 # Generate i18n files
 %{__python2} setup.py compile_catalog -d build/lib/oslo_middleware/locale
 
@@ -222,9 +228,11 @@ rm -rf .testrepository
 %{python3_sitelib}/oslo_middleware/tests/
 %endif
 
+%if 0%{?with_doc}
 %files doc
 %license LICENSE
 %doc doc/build/html
+%endif
 
 %files -n python2-%{pkg_name}-tests
 %{python2_sitelib}/oslo_middleware/tests/
