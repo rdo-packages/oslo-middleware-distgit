@@ -18,8 +18,8 @@ and support for limiting size/connection etc.
 Tests for the Oslo Middleware library.
 
 Name:           python-oslo-middleware
-Version:        XXX
-Release:        XXX
+Version:        3.37.1
+Release:        1%{?dist}
 Summary:        OpenStack Oslo Middleware library
 
 License:        ASL 2.0
@@ -246,3 +246,6 @@ rm -rf .testrepository
 %license LICENSE
 
 %changelog
+* Fri Mar 08 2019 RDO <dev@lists.rdoproject.org> 3.37.1-1
+- Update to 3.37.1
+
