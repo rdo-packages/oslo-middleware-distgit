@@ -67,9 +67,9 @@ Requires:       python2-six
 Requires:       python2-statsd
 Requires:       python2-stevedore >= 1.20.0
 %if 0%{?fedora} || 0%{?rhel} > 7
-Requires:       python2-webob >= 1.7.1
+Requires:       python2-webob >= 1.8.0
 %else
-Requires:       python-webob >= 1.7.1
+Requires:       python-webob >= 1.8.0
 %endif
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
@@ -108,7 +108,7 @@ Requires:       python3-oslo-utils >= 3.33.0
 Requires:       python3-six
 Requires:       python3-statsd
 Requires:       python3-stevedore >= 1.20.0
-Requires:       python3-webob >= 1.7.1
+Requires:       python3-webob >= 1.8.0
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python3-%{pkg_name}
