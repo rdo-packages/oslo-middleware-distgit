@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5b49b993_beb21419",
+        "filename": "python-oslo-middleware.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-09-23T11:25:15Z",
+      "side": 1,
+      "message": "this can be out of condition",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 62,
+        "endChar": 36
+      },
+      "revId": "bf8d26d13b3ddc813e06af0e3a004a6d67d1bc23",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39176663_06a5c3d8",
+        "filename": "python-oslo-middleware.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-09-23T11:25:15Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 45
+      },
+      "revId": "bf8d26d13b3ddc813e06af0e3a004a6d67d1bc23",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d0799d6d_8055c7e8",
+        "filename": "python-oslo-middleware.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-09-23T11:25:15Z",
+      "side": 1,
+      "message": "this not needed now",
+      "range": {
+        "startLine": 152,
+        "startChar": 0,
+        "endLine": 152,
+        "endChar": 22
+      },
+      "revId": "bf8d26d13b3ddc813e06af0e3a004a6d67d1bc23",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
