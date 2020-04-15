@@ -1,14 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global with_doc 1
@@ -35,45 +24,45 @@ URL:            https://launchpad.net/oslo
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
 BuildArch:      noarch
 
-%package -n python%{pyver}-%{pkg_name}
+%package -n python3-%{pkg_name}
 Summary:        OpenStack Oslo Middleware library
-%{?python_provide:%python_provide python%{pyver}-%{pkg_name}}
+%{?python_provide:%python_provide python3-%{pkg_name}}
 
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-pbr
+BuildRequires:  python3-devel
+BuildRequires:  python3-pbr
 # for docs build
 BuildRequires:  git
-BuildRequires:  python%{pyver}-oslo-config
-BuildRequires:  python%{pyver}-oslo-context
-BuildRequires:  python%{pyver}-oslo-i18n
-BuildRequires:  python%{pyver}-oslo-utils
+BuildRequires:  python3-oslo-config
+BuildRequires:  python3-oslo-context
+BuildRequires:  python3-oslo-i18n
+BuildRequires:  python3-oslo-utils
 # Required for testing
-BuildRequires:  python%{pyver}-fixtures
-BuildRequires:  python%{pyver}-hacking
-BuildRequires:  python%{pyver}-jinja2
-BuildRequires:  python%{pyver}-mock
-BuildRequires:  python%{pyver}-oslotest
-BuildRequires:  python%{pyver}-oslo-serialization
-BuildRequires:  python%{pyver}-statsd
-BuildRequires:  python%{pyver}-testtools
-BuildRequires:  python%{pyver}-webob
+BuildRequires:  python3-fixtures
+BuildRequires:  python3-hacking
+BuildRequires:  python3-jinja2
+BuildRequires:  python3-mock
+BuildRequires:  python3-oslotest
+BuildRequires:  python3-oslo-serialization
+BuildRequires:  python3-statsd
+BuildRequires:  python3-testtools
+BuildRequires:  python3-webob
 # Required to compile translation files
-BuildRequires:  python%{pyver}-babel
+BuildRequires:  python3-babel
 
-Requires:       python%{pyver}-pbr
-Requires:       python%{pyver}-debtcollector >= 1.2.0
-Requires:       python%{pyver}-jinja2
-Requires:       python%{pyver}-oslo-config >= 2:5.2.0
-Requires:       python%{pyver}-oslo-context >= 2.19.2
-Requires:       python%{pyver}-oslo-i18n >= 3.15.3
-Requires:       python%{pyver}-oslo-utils >= 3.33.0
-Requires:       python%{pyver}-six
-Requires:       python%{pyver}-statsd
-Requires:       python%{pyver}-stevedore >= 1.20.0
-Requires:       python%{pyver}-webob >= 1.8.0
+Requires:       python3-pbr
+Requires:       python3-debtcollector >= 1.2.0
+Requires:       python3-jinja2
+Requires:       python3-oslo-config >= 2:5.2.0
+Requires:       python3-oslo-context >= 2.19.2
+Requires:       python3-oslo-i18n >= 3.15.3
+Requires:       python3-oslo-utils >= 3.33.0
+Requires:       python3-six
+Requires:       python3-statsd
+Requires:       python3-stevedore >= 1.20.0
+Requires:       python3-webob >= 1.8.0
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
-%description -n python%{pyver}-%{pkg_name}
+%description -n python3-%{pkg_name}
 %{common_desc}
 
 %if 0%{?with_doc}
@@ -81,24 +70,24 @@ Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 Summary:    Documentation for the Oslo Middleware library
 Group:      Documentation
 
-BuildRequires:  python%{pyver}-sphinx
-BuildRequires:  python%{pyver}-openstackdocstheme
+BuildRequires:  python3-sphinx
+BuildRequires:  python3-openstackdocstheme
 
 %description -n python-%{pkg_name}-doc
 Documentation for the Oslo Middleware library.
 %endif
 
-%package -n python%{pyver}-%{pkg_name}-tests
+%package -n python3-%{pkg_name}-tests
 Summary:    Tests for the Oslo Middleware library
 
-Requires:  python%{pyver}-%{pkg_name} = %{version}-%{release}
-Requires:  python%{pyver}-fixtures
-Requires:  python%{pyver}-hacking
-Requires:  python%{pyver}-mock
-Requires:  python%{pyver}-oslotest
-Requires:  python%{pyver}-testtools
+Requires:  python3-%{pkg_name} = %{version}-%{release}
+Requires:  python3-fixtures
+Requires:  python3-hacking
+Requires:  python3-mock
+Requires:  python3-oslotest
+Requires:  python3-testtools
 
-%description -n python%{pyver}-%{pkg_name}-tests
+%description -n python3-%{pkg_name}-tests
 %{common_desc2}
 
 %package  -n python-%{pkg_name}-lang
@@ -116,38 +105,38 @@ Translation files for Oslo middleware library
 rm -rf {test-,}requirements.txt
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %if 0%{?with_doc}
 # generate html docs
-%{pyver_bin} setup.py build_sphinx -b html
-# remove the sphinx-build-%{pyver} leftovers
+sphinx-build-3 -b html doc/source doc/build/html
+# remove the sphinx-build-3 leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 # Generate i18n files
-%{pyver_bin} setup.py compile_catalog -d build/lib/oslo_middleware/locale
+python3 setup.py compile_catalog -d build/lib/oslo_middleware/locale
 
 %install
-%{pyver_install}
+%{py3_install}
 
 # Install i18n .mo files (.po and .pot are not required)
 install -d -m 755 %{buildroot}%{_datadir}
-rm -f %{buildroot}%{pyver_sitelib}/oslo_middleware/locale/*/LC_*/oslo_middleware*po
-rm -f %{buildroot}%{pyver_sitelib}/oslo_middleware/locale/*pot
-mv %{buildroot}%{pyver_sitelib}/oslo_middleware/locale %{buildroot}%{_datadir}/locale
+rm -f %{buildroot}%{python3_sitelib}/oslo_middleware/locale/*/LC_*/oslo_middleware*po
+rm -f %{buildroot}%{python3_sitelib}/oslo_middleware/locale/*pot
+mv %{buildroot}%{python3_sitelib}/oslo_middleware/locale %{buildroot}%{_datadir}/locale
 
 # Find language files
 %find_lang oslo_middleware --all-name
 
 %check
-%{pyver_bin} setup.py test
+python3 setup.py test
 
-%files -n python%{pyver}-%{pkg_name}
+%files -n python3-%{pkg_name}
 %license LICENSE
 %doc README.rst
-%{pyver_sitelib}/oslo_middleware
-%{pyver_sitelib}/*.egg-info
-%exclude %{pyver_sitelib}/oslo_middleware/tests/
+%{python3_sitelib}/oslo_middleware
+%{python3_sitelib}/*.egg-info
+%exclude %{python3_sitelib}/oslo_middleware/tests/
 
 %if 0%{?with_doc}
 %files -n python-%{pkg_name}-doc
@@ -155,8 +144,8 @@ mv %{buildroot}%{pyver_sitelib}/oslo_middleware/locale %{buildroot}%{_datadir}/l
 %doc doc/build/html
 %endif
 
-%files -n python%{pyver}-%{pkg_name}-tests
-%{pyver_sitelib}/oslo_middleware/tests/
+%files -n python3-%{pkg_name}-tests
+%{python3_sitelib}/oslo_middleware/tests/
 
 %files -n python-%{pkg_name}-lang -f oslo_middleware.lang
 %license LICENSE
