@@ -114,7 +114,7 @@ sphinx-build-3 -b html doc/source doc/build/html
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 # Generate i18n files
-python3 setup.py compile_catalog -d build/lib/oslo_middleware/locale
+python3 setup.py compile_catalog -d build/lib/oslo_middleware/locale --domain oslo_middleware
 
 %install
 %{py3_install}
