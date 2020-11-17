@@ -44,7 +44,7 @@ Summary:        OpenStack Oslo Middleware library
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
 # for docs build
-BuildRequires:  git
+BuildRequires:  git-core
 BuildRequires:  python3-oslo-config
 BuildRequires:  python3-oslo-context
 BuildRequires:  python3-oslo-i18n
