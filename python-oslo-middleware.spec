@@ -50,6 +50,7 @@ BuildRequires:  python3-oslo-context
 BuildRequires:  python3-oslo-i18n
 BuildRequires:  python3-oslo-utils
 # Required for testing
+BuildRequires:  python3-bcrypt
 BuildRequires:  python3-fixtures
 BuildRequires:  python3-hacking
 BuildRequires:  python3-jinja2
@@ -63,6 +64,7 @@ BuildRequires:  python3-webob
 BuildRequires:  python3-babel
 
 Requires:       python3-pbr
+Requires:       python3-bcrypt >= 3.1.3
 Requires:       python3-debtcollector >= 1.2.0
 Requires:       python3-jinja2
 Requires:       python3-oslo-config >= 2:5.2.0
