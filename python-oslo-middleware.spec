@@ -66,7 +66,7 @@ BuildRequires:  python3-babel
 Requires:       python3-pbr
 Requires:       python3-bcrypt >= 3.1.3
 Requires:       python3-debtcollector >= 1.2.0
-Requires:       python3-jinja2
+Requires:       python3-jinja2 >= 3.0.0
 Requires:       python3-oslo-config >= 2:5.2.0
 Requires:       python3-oslo-context >= 2.19.2
 Requires:       python3-oslo-i18n >= 3.15.3
