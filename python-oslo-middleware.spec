@@ -18,7 +18,7 @@ Tests for the Oslo Middleware library.
 
 Name:           python-oslo-middleware
 Version:        5.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack Oslo Middleware library
 
 License:        ASL 2.0
@@ -66,7 +66,7 @@ BuildRequires:  python3-babel
 Requires:       python3-pbr
 Requires:       python3-bcrypt >= 3.1.3
 Requires:       python3-debtcollector >= 1.2.0
-Requires:       python3-jinja2
+Requires:       python3-jinja2 >= 3.0.0
 Requires:       python3-oslo-config >= 2:5.2.0
 Requires:       python3-oslo-context >= 2.19.2
 Requires:       python3-oslo-i18n >= 3.15.3
@@ -169,6 +169,9 @@ python3 setup.py test
 %license LICENSE
 
 %changelog
+* Mon Feb 19 2024 Tobias Urdin <tobias.urdin@binero.com> 5.1.1-2
+- Fix jinja2 requires
+
 * Tue Mar 07 2023 RDO <dev@lists.rdoproject.org> 5.1.1-1
 - Update to 5.1.1
 
